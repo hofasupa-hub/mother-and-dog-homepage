@@ -1,0 +1,121 @@
+:root{
+  --ink:#3e332e;--muted:#756861;--pink:#d58d93;--pink-dark:#bf7179;
+  --pink-soft:#f5e4e6;--cream:#fffaf5;--beige:#eaded4;--white:#fff;
+  --line:#eadfd8;--green:#6da37a;--shadow:0 18px 55px rgba(72,49,42,.12);
+  --max:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.85}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.site-header{height:76px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100% - var(--max))/2));background:rgba(255,250,245,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(234,223,216,.85)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand strong,.brand small{display:block}
+.brand strong{font-family:"Kaisei Opti",serif;font-size:20px}
+.brand small{font-size:10px;color:var(--muted);letter-spacing:.14em}
+.brand-mark{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--pink-soft)}
+nav{display:flex;align-items:center;gap:21px;font-size:13px;font-weight:700}
+.nav-contact{padding:10px 16px;border-radius:999px;background:var(--pink);color:#fff}
+.menu-button{display:none;border:0;background:none;font-size:26px}
+.hero{position:relative;min-height:700px;display:flex;align-items:center;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(45,31,27,.74),rgba(45,31,27,.22) 62%,rgba(45,31,27,.06))}
+.hero-content{position:relative;z-index:2;width:min(var(--max),calc(100% - 44px));margin:auto;color:#fff}
+.kicker,.section-label{font-size:12px;letter-spacing:.18em;font-weight:700;color:var(--pink)}
+.hero .kicker{color:#ffd7da}
+.hero h1{font-family:"Kaisei Opti",serif;font-size:clamp(43px,6vw,78px);line-height:1.34;margin:0 0 18px}
+.hero-lead{max-width:620px;font-size:17px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.button{display:inline-flex;min-height:52px;padding:0 25px;border-radius:999px;align-items:center;justify-content:center;font-weight:700;border:1px solid transparent}
+.primary{background:var(--pink);color:#fff}
+.secondary{border-color:rgba(255,255,255,.68);color:#fff;background:rgba(255,255,255,.08)}
+.hero-note{position:absolute;right:5vw;bottom:38px;z-index:3;background:rgba(255,255,255,.92);padding:18px 24px;border-radius:18px;box-shadow:var(--shadow)}
+.hero-note strong,.hero-note span{display:block}
+.hero-note span{font-size:12px;color:var(--muted)}
+.section{width:min(var(--max),calc(100% - 44px));margin:auto;padding:104px 0}
+.message{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.message h2,.service-copy h2,.profile-copy h2,.section-heading h2,.contact h2{font-family:"Kaisei Opti",serif;font-size:clamp(31px,4vw,51px);line-height:1.45;margin:10px 0 22px}
+.message-copy p:not(.section-label),.service-copy p,.profile-copy p,.section-heading p{color:var(--muted)}
+.message-photo img{border-radius:34px;box-shadow:var(--shadow)}
+.section-heading{max-width:760px;margin-bottom:44px}
+.section-heading span{color:var(--pink);font-size:12px;font-weight:700;letter-spacing:.14em}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.worry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.worry-grid article,.feature-grid article,.flow-grid article,.blog-grid article{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
+.worry-grid b,.flow-grid b{font-size:34px;color:var(--pink-soft)}
+.worry-grid h3,.feature-grid h3,.flow-grid h3{margin:10px 0}
+.worry-grid p,.feature-grid p,.flow-grid p{font-size:14px;color:var(--muted)}
+.service-band{background:#f7ecee;padding:104px max(22px,calc((100% - var(--max))/2))}
+.service-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+.service-photo img{border-radius:30px;box-shadow:var(--shadow)}
+.check-list{list-style:none;padding:0;margin:26px 0 0}
+.check-list li{padding:11px 0 11px 30px;border-bottom:1px solid rgba(213,141,147,.25);position:relative}
+.check-list li:before{content:"✓";position:absolute;left:0;color:var(--pink);font-weight:700}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature-grid .icon{font-size:40px}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.price-grid article{position:relative;background:#fff;padding:34px;border:1px solid var(--line);border-radius:26px}
+.price-grid small{font-size:11px;color:var(--pink);letter-spacing:.16em;font-weight:700}
+.price-grid h3{font-size:24px}
+.price{font-size:30px;font-weight:700;color:var(--pink)}
+.price-grid ul{padding-left:18px;color:var(--muted)}
+.featured{box-shadow:var(--shadow);transform:translateY(-10px)}
+.featured em{position:absolute;right:22px;top:20px;background:var(--pink);color:#fff;padding:5px 11px;border-radius:999px;font-style:normal;font-size:11px}
+.temporary{font-size:12px;color:var(--muted);margin-top:18px}
+.flow-wrap{background:#f7eeee}
+.flow{padding-left:0;padding-right:0}
+.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.profile{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:center}
+.profile-photo img{border-radius:42% 42% 46% 42%;box-shadow:var(--shadow)}
+.profile-meta{margin-top:25px;padding-top:21px;border-top:1px solid var(--line)}
+.profile-meta strong,.profile-meta span{display:block}
+.profile-meta span{font-size:12px;color:var(--muted)}
+.gallery{padding:90px max(22px,calc((100% - var(--max))/2));background:#4b3f39}
+.gallery-heading{text-align:center;color:#fff;margin-bottom:38px}
+.gallery-heading span{font-size:12px;letter-spacing:.16em;color:#f4bcc1;font-weight:700}
+.gallery-heading h2{font-family:"Kaisei Opti",serif;font-size:clamp(31px,4vw,50px);margin:8px 0}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery-grid img{width:100%;height:310px;object-fit:cover;border-radius:22px}
+.faq details{background:#fff;border-bottom:1px solid var(--line);padding:20px 24px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq details p{color:var(--muted)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.blog-grid small{color:var(--pink);font-weight:700}
+.blog-grid h3{font-family:"Kaisei Opti",serif;font-size:21px}
+.blog-grid p{font-size:14px;color:var(--muted)}
+.contact{padding:80px max(22px,calc((100% - var(--max))/2));background:var(--pink);color:#fff;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.contact .section-label{color:#fff}
+.contact-actions{display:grid;gap:12px}
+.line{background:var(--green);color:#fff}
+.mail{background:#fff;color:var(--pink-dark)}
+.contact small{text-align:center}
+footer{width:min(var(--max),calc(100% - 44px));margin:auto;padding:32px 0;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}
+@media(max-width:900px){
+  nav{display:none;position:fixed;top:68px;left:14px;right:14px;background:#fff;padding:16px;border-radius:20px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}
+  nav.open{display:flex}.menu-button{display:block}
+  .hero{min-height:620px}
+  .worry-grid,.flow-grid{grid-template-columns:repeat(2,1fr)}
+  .feature-grid,.price-grid,.blog-grid{grid-template-columns:1fr}
+  .featured{transform:none}
+  .message,.service-inner,.profile,.contact{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid img:last-child{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .site-header{height:66px;padding:0 14px}
+  .hero{min-height:650px}
+  .hero-content{width:calc(100% - 28px)}
+  .hero h1{font-size:42px}
+  .hero-note{left:14px;right:14px;bottom:18px}
+  .section{width:calc(100% - 28px);padding:74px 0}
+  .worry-grid,.flow-grid{grid-template-columns:1fr}
+  .service-band{padding:74px 14px}
+  .gallery{padding:74px 14px}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-grid img{height:240px}
+  .gallery-grid img:last-child{grid-column:auto}
+  .contact{padding:64px 18px}
+  .hero-actions .button{width:100%}
+  footer{flex-direction:column;align-items:flex-start;gap:14px}
+}
