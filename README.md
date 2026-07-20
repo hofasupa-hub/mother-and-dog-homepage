@@ -1,30 +1,38 @@
-# Mother & Dog 訪問トリミングホームページ 第2案
+# Mother & Dog 訪問トリミングホームページ 第3版
 
-娘さんが作成途中だったWixホームページの画像をもとに、一般のお客様向けの通常ホームページとして再構成した確認用サイトです。
+今回は、GitHubへ簡単にアップロードできるよう、すべてのファイルを同じ場所に置いています。
 
-## 公開手順（GitHub + Cloudflare Pages）
+## GitHubへアップロードするファイル
 
-1. ZIPを展開します。
-2. GitHubで新しいリポジトリを作成します。
-3. 展開した中の `index.html`、`styles.css`、`script.js`、`assets` フォルダをアップロードします。
-4. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git。
-5. GitHubのリポジトリを選択します。
-6. Framework preset：None
-7. Build command：空欄
-8. Build output directory：/
-9. Deploy
+- index.html
+- styles.css
+- script.js
+- README.md
+- hero.jpg
+- profile.jpg
+- service.jpg
+- menu.jpg
+- gallery1.jpg
+- gallery2.jpg
+- gallery3.jpg
 
-## 現時点で仮置きしているもの
+## アップロード手順
 
-- 店名
-- 正式なキャッチコピー
-- トリマー氏名・経歴・資格
-- 対応地域
-- LINE、メール、電話番号
-- 正式料金
-- 支払い方法
-- 実際のお客様の声
-- ブログ記事
-- 写真
+1. このZIPを展開します。
+2. 展開したフォルダを開きます。
+3. 中にあるファイルをすべて選択します。
+4. GitHubのリポジトリで「Add file」→「Upload files」を押します。
+5. 選択したファイルをドラッグ＆ドロップします。
+6. 画面下の「Commit changes」を押します。
 
-まず全体を見てから、ユウと順番に一つずつ修正して完成させます。
+## Cloudflare Pages設定
+
+- Framework preset：None
+- Build command：空欄
+- Build output directory：/
+
+## assetsフォルダについて
+
+本来は画像をassetsフォルダにまとめた方が、整理しやすく管理もしやすいです。
+今回は最初の公開を優先して、すべて同じ場所に置きました。
+後日、assetsフォルダを使う正しいアップロード方法を、画像付き手順書としてまとめます。
